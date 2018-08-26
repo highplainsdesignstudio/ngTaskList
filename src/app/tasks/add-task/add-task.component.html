@@ -1,0 +1,9 @@
+<form class="row" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group col-11">
+        <label for="newTask">New Task</label>
+        <input id="newTask" [(ngModel)]="newTask" name="newTask" class="form-control" required type="text">
+    </div>
+    <button class="btn btn-primary col-1" type="submit">+</button>
+</form>
+
+<p>{{ newTask }}</p>
