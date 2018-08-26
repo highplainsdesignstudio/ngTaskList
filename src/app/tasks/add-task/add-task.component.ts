@@ -19,18 +19,11 @@ export class AddTaskComponent {
       var trimmedTask = form.value.newTask.trim();
       if (trimmedTask !== "") {
         this.newTask = trimmedTask;
-        // console.log(this.newTask);
-        // var emitValue = {addTaskForm: this.addTaskForm, form: form};
-        this.submitTask.emit(this.addTaskForm);
-        // form.reset();
+        var emitValue = {submitted: this.addTaskForm, form: form};
+        this.submitTask.emit(emitValue);
       } else {
       // do nothing
+      }
     }
-    }
-    
   }
-
-  // onSubmit() {
-  //   this.submitTask.emit(this.addTaskForm);
-  // }
 }

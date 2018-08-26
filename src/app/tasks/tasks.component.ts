@@ -6,14 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  taskList: string[] = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClearAllTasks() {
+    this.taskList = [];
+  }
+
   onSubmit(event) {
-    console.log(event);
-    // event.form.reset();
+    this.taskList.push(event.submitted.value.newTask);
+    event.form.reset();
   }
 }
