@@ -1,5 +1,19 @@
 <!-- The template in the app-task contains a <li> because it is surrounded by a <ul> here. -->
-<ul>
-  <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+<ul >
+  <app-task 
+    class="row" 
+    *ngFor="let task of tasks; index as i"
+    [index]="i"
+    [task]="task"
+    (completedTask)="completedTask($event)"
+    (deletedTask)="deletedTask($event)">
+  </app-task>
 </ul>
 <button (click)="onClearAllTasks()">Clear All</button>
+
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of completedTasks">{{item}}</li>
+</ul>

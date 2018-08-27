@@ -9,16 +9,27 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class TaskListComponent implements OnInit {
 
   @Input() tasks;
-  @Output() clearTasks = new EventEmitter();
+  @Output() clearTasksEvent = new EventEmitter();
+
+  completedTasks = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  completedTask(index) {
+    this.completedTasks.push(this.tasks[index]);
+    this.tasks.splice(index, 1);
+  }
+
+  deletedTask(index) {
+    this.tasks.splice(index, 1);
+  }
+
   onClearAllTasks(event) {
     this.tasks = [];
-    this.clearTasks.emit();
+    this.clearTasksEvent.emit();
   }
 
 }

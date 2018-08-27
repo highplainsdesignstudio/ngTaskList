@@ -1,1 +1,9 @@
-<li>{{ task }}</li>
+<button class="col-1 btn btn-success" (click)="onCompleted()">
+    <i class="far fa-check-circle"></i>
+</button>
+
+<li class="col-10">{{ task }}</li> 
+
+<button class="col-1 btn btn-danger" (click)="onDeleted()">
+    <i class="fas fa-minus-circle"></i>
+</button>

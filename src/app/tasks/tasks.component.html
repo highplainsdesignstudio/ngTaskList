@@ -1,4 +1,7 @@
 <div class="container">
   <app-add-task (submitTask)="onSubmit($event)"></app-add-task>
-  <app-task-list [(tasks)]="taskList" (clearTasks)="onClearAllTasks()" ></app-task-list>
+  <app-task-list 
+    [(tasks)]="taskList" 
+    (clearTasksEvent)="onClearAllTasks()">
+  </app-task-list>
 </div>
