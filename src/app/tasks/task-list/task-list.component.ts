@@ -9,10 +9,11 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class TaskListComponent implements OnInit {
 
   @Input() tasks;
+  @Input() completedTasks = [];
+
   @Output() clearTasksEvent = new EventEmitter();
 
-  completedTasks = [];
-
+  
   constructor() { }
 
   ngOnInit() {

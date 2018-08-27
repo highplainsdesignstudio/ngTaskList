@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-completed-task',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./completed-task.component.css']
 })
 export class CompletedTaskComponent implements OnInit {
+
+  @Input() task;
 
   constructor() { }
 

@@ -1,4 +1,6 @@
-<p>
-  completed-task-list works!
-</p>
-<app-completed-task></app-completed-task>
+<ul>
+    <app-completed-task 
+      *ngFor="let completedTask of completedTasks"
+      [task]="completedTask">
+    </app-completed-task>
+</ul>

@@ -2,7 +2,10 @@
   <app-add-task (submitTask)="onSubmit($event)"></app-add-task>
   <app-task-list 
     [(tasks)]="taskList" 
+    [(completedTasks)]="completedTaskList"
     (clearTasksEvent)="onClearAllTasks()">
   </app-task-list>
-  <app-completed-task-list></app-completed-task-list>
+  <app-completed-task-list
+    [(completedTasks)]="completedTaskList">
+  </app-completed-task-list>
 </div>
