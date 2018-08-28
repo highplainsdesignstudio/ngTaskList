@@ -7,11 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CompletedTaskListComponent implements OnInit {
 
-  @Input() completedTasks;
+  @Input() completedTasks = [];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  deleteCompletedTask(index) {
+    this.completedTasks.splice(index, 1);
   }
 
 }
