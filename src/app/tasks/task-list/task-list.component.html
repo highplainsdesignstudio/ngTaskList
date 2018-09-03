@@ -1,4 +1,5 @@
 <!-- The template in the app-task contains a <li> because it is surrounded by a <ul> here. -->
+<h2 *ngIf="tasks.length > 0">Outstanding Tasks</h2>
 <ul id="tasksUL">
   <app-task 
     class="row" 

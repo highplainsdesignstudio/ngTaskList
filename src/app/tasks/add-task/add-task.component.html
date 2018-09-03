@@ -1,19 +1,21 @@
-<form id="addTaskForm" class="row" (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <div class="form-group col-11">
-        <!-- <label for="newTask">New Task</label> -->
-        <input id="newTask" 
-            [(ngModel)]="newTask" 
-            name="newTask" 
-            class="form-control"
-            placeholder="New Task"
-            required 
-            type="text">
-    </div>
-    <div class="form-group col-1">
-        <button 
-            class="btn btn-primary" 
-            type="submit">
-            <i class="fas fa-plus-circle fa-lg"></i>
-        </button>
+<form id="addTaskForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="row">
+        <div class="form-group col-9">
+            <!-- <label for="newTask">New Task</label> -->
+            <input id="newTask" 
+                [(ngModel)]="newTask" 
+                name="newTask" 
+                class="form-control"
+                placeholder="New Task"
+                required 
+                type="text">
+        </div>
+        <div class="form-group col-3">
+            <button 
+                class="btn btn-primary" 
+                type="submit">
+                <i class="fas fa-plus-circle fa-lg"></i>
+            </button>
+        </div>
     </div>
 </form>

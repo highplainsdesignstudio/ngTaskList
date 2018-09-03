@@ -1,11 +1,11 @@
 <h2 *ngIf="completedTasks.length > 0">Completed Tasks</h2>
-<ul >
-    <app-completed-task
-      class="row" 
-      *ngFor="let completedTask of completedTasks; index as i"
-      [task]="completedTask"
-      [index]="i"
-      (deleteCompletedTask)="deleteCompletedTask($event)">
-    </app-completed-task>
+<ul>
+  <app-completed-task
+    class="row" 
+    *ngFor="let completedTask of completedTasks; index as i"
+    [task]="completedTask"
+    [index]="i"
+    (deleteCompletedTask)="deleteCompletedTask($event)">
+  </app-completed-task>
 </ul>
 

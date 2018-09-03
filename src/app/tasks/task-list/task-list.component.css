@@ -1,3 +1,9 @@
+h2 {
+    text-align: center;
+}
+
 #tasksUL {
+    /* margin-top: 30px; */
     margin-top: 30px;
+    margin-right: 35px;
 }

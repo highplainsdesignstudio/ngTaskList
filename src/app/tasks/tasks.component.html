@@ -1,10 +1,17 @@
 <div class="container" id="app-container">
-  <app-add-task (submitTask)="onSubmit($event)"></app-add-task>
+  <div class="row">
+    <app-add-task 
+      (submitTask)="onSubmit($event)"
+      class="col-12">
+    </app-add-task>
+  </div>
+
   <app-task-list 
     [(tasks)]="taskList" 
     [(completedTasks)]="completedTaskList"
     (clearTasksEvent)="onClearAllTasks()">
   </app-task-list>
+  
   <app-completed-task-list
     [(completedTasks)]="completedTaskList">
   </app-completed-task-list>
